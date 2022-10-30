@@ -23,7 +23,6 @@ class AlbumListActivity : AppCompatActivity() {
 
         volleyBroker.instance.add(VolleyBroker.getRequest("albums",
             { response ->
-
                 val albumJsonResponse = JSONArray(response)
                 val albums = arrayOfNulls<String>(albumJsonResponse.length())
                 Log.d("ALBUMS", albumJsonResponse.toString())
