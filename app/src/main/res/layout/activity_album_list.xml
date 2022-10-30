@@ -13,7 +13,18 @@
         android:orientation="vertical"
         tools:context=".AlbumListActivity">
 
+        <Button
+            android:id="@+id/fetch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Obtener albumnes" />
 
+
+        <ListView
+            android:id="@+id/albumlist"
+            android:layout_width="match_parent"
+            android:layout_height="629dp"></ListView>
 
     </LinearLayout>
 </layout>
