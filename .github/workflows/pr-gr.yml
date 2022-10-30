@@ -1,0 +1,40 @@
+name: Merge Feature Into Develop
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'feat/**'
+
+jobs:
+  develop:
+    name: Create PR Feature to Develop
+    if: contains(github.event.head_commit.message, '[MERGE2DEVELOP]') ||
+        contains(github.event.head_commit.message, '[MERGE2DEV]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: create pull request gromeron
+        if: ${{ env.GITHUB_ACTOR }} == "gromeron"
+        id: open-pr-dev1
+        uses: repo-sync/pull-request@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          destination_branch: 'develop'
+          pr_title: "[Automated] Merge ${{ github.ref_name }} into develop"
+          pr_body: "Automated Pull Request"
+          pr_reviewer: "enmorales"
+          # Aprover
+          pr_assignee: "hassleruniandes"
+
+      - name: enable automerge
+        if: steps.open-pr.outputs.pr_number != ''
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.open-pr.outputs.pr_number }}
+          merge-method: merge
