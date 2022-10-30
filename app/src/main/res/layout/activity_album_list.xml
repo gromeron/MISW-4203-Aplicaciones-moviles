@@ -13,12 +13,20 @@
         android:orientation="vertical"
         tools:context=".AlbumListActivity">
 
-        <Button
-            android:id="@+id/fetch_button"
+        <TextView
+            android:id="@+id/get_result_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Obtener albumnes" />
+            android:text="Listado de Álbumes"
+            android:textSize="30sp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/fetch_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:text="Obtener Álbumes" />-->
 
 
         <ListView
