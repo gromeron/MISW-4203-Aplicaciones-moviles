@@ -19,7 +19,7 @@ class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
 
         setContentView(R.layout.activity_album_list)
 
-        val reciclerView = findViewById<RecyclerView>(R.id.albumsView)
+        val recyclerview = findViewById<RecyclerView>(R.id.albumsView)
         var albums = mutableListOf<Album>()
 
         volleyBroker = VolleyBroker(this.applicationContext)
@@ -35,8 +35,8 @@ class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
 
                 val adapter = ListAdapter(this, albums)
 
-                reciclerView.layoutManager = LinearLayoutManager(this)
-                reciclerView.adapter = adapter
+                recyclerview.layoutManager = LinearLayoutManager(this)
+                recyclerview.adapter = adapter
             },{}
         ))
     }
