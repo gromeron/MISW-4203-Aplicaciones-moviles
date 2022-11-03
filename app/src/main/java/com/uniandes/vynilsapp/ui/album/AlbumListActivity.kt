@@ -1,4 +1,4 @@
-package com.uniandes.vynilsapp
+package com.uniandes.vynilsapp.ui.album
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import VolleyBroker
 import org.json.JSONArray
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.model.Album
 
 class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
@@ -17,7 +18,7 @@ class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
 
-        setContentView(R.layout.activity_album_list)
+       // setContentView(R.layout.activity_album_list)
 
         val recyclerview = findViewById<RecyclerView>(R.id.albumsView)
         var albums = mutableListOf<Album>()
@@ -30,7 +31,9 @@ class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
 
                 for (i in 0 until albumJsonResponse.length()) {
                     val album = albumJsonResponse.getJSONObject(i)
-                    albums.add(Album(album.get("name").toString(), album.get("releaseDate").toString(), R.drawable.ic_launcher_foreground))
+                    albums.add(Album(album.get("name").toString(), album.get("releaseDate").toString(),
+                        R.drawable.ic_launcher_foreground
+                    ))
                 }
 
                 val adapter = ListAdapter(this, albums)

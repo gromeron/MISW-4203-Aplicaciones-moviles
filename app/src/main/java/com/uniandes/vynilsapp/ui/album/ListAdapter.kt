@@ -1,4 +1,4 @@
-package com.uniandes.vynilsapp
+package com.uniandes.vynilsapp.ui.album
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.model.Album
 
 class ListAdapter (private val listener: OnItemClickListener, private val albums: List<Album>): RecyclerView.Adapter<ListAdapter.ViewHolder> (){

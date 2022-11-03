@@ -6,6 +6,12 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_albums"
+        android:name="com.uniandes.vynilsapp.ui.album.AlbumFragment"
+        android:label="@string/menu_albums"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.uniandes.vynilsapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
