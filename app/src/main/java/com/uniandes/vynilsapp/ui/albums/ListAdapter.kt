@@ -1,4 +1,4 @@
-package com.uniandes.vynilsapp.ui.album
+package com.uniandes.vynilsapp.ui.albums
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +10,6 @@ import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.model.Album
 
 class ListAdapter (private val listener: OnItemClickListener, private val albums: List<Album>): RecyclerView.Adapter<ListAdapter.ViewHolder> (){
-
-   // val images = intArrayOf(R.drawable.ic_launcher_foreground, R.drawable.ic_launcher_foreground, R.drawable.ic_launcher_foreground)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val layout = LayoutInflater.from(viewGroup.context).inflate(R.layout.album_item, viewGroup, false)

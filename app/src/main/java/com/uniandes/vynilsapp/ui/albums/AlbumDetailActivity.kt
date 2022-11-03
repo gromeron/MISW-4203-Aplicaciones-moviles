@@ -1,8 +1,7 @@
-package com.uniandes.vynilsapp.ui.album
+package com.uniandes.vynilsapp.ui.albums
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.uniandes.vynilsapp.R
 
 class AlbumDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

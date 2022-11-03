@@ -1,4 +1,4 @@
-package com.uniandes.vynilsapp.ui.album
+package com.uniandes.vynilsapp.ui.albums
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

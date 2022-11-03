@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_albums"
-        android:name="com.uniandes.vynilsapp.ui.album.AlbumFragment"
+        android:name="com.uniandes.vynilsapp.ui.albums.AlbumFragment"
         android:label="@string/menu_albums"
         tools:layout="@layout/fragment_home" />
 

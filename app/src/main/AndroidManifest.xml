@@ -29,15 +29,15 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.album.AlbumDetailActivity"
+            android:name=".ui.albums.AlbumDetailActivity"
             android:exported="false"
-            android:parentActivityName=".ui.album.AlbumListActivity">
+            android:parentActivityName=".ui.albums.AlbumListActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.album.AlbumListActivity"
+            android:name=".ui.albums.AlbumListActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
