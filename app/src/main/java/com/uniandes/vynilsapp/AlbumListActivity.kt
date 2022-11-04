@@ -7,6 +7,7 @@ import VolleyBroker
 import org.json.JSONArray
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.uniandes.vynilsapp.databinding.ActivityAlbumListBinding
 import com.uniandes.vynilsapp.model.Album
 
 class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
@@ -17,9 +18,13 @@ class AlbumListActivity : AppCompatActivity(), ListAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
 
-        setContentView(R.layout.activity_album_list)
+        //setContentView(R.layout.activity_album_list)
+        val binding = ActivityAlbumListBinding.inflate(layoutInflater)
 
-        val recyclerview = findViewById<RecyclerView>(R.id.albumsView)
+        setContentView(binding.root)
+
+        //val recyclerview = findViewById<RecyclerView>(R.id.albumsView)
+        val recyclerview = binding.albumsView
         var albums = mutableListOf<Album>()
 
         volleyBroker = VolleyBroker(this.applicationContext)
