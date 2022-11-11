@@ -11,7 +11,7 @@ import com.uniandes.vynilsapp.databinding.ItemAlbumBinding
 
 class AlbumViewHolder(view: View): ViewHolder(view) {
 
-    val binding = ItemAlbumBinding.bind(view)
+    private val binding = ItemAlbumBinding.bind(view)
 
     //val albumName = view.findViewById<TextView>(R.id.tv_album_name)
     //val albumGenre = view.findViewById<TextView>(R.id.tv_album_genre)
