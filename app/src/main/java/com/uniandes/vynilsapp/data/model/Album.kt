@@ -1,14 +1,14 @@
 package com.uniandes.vynilsapp.data.model
 
 data class Album(
-    val comments: List<Comment>,
-    val cover: String,
-    val description: String,
-    val genre: String,
     val id: Int,
     val name: String,
-    val performers: List<Performer>,
-    val recordLabel: String,
+    val cover: String,
     val releaseDate: String,
-    val tracks: List<Track>
+    val description: String,
+    val genre: String,
+    val recordLabel: String,
+    val tracks: List<Track>,
+    val performers: List<Performer>,
+    val comments: List<Comment>
 )

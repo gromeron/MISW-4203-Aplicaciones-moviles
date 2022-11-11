@@ -3,10 +3,11 @@ package com.uniandes.vynilsapp.view.album
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Album
 
-class AlbumViewHolder(view: View) {
+class AlbumViewHolder(view: View): ViewHolder(view) {
 
     val albumName = view.findViewById<TextView>(R.id.tv_album_name)
     val albumGenre = view.findViewById<TextView>(R.id.tv_album_genre)

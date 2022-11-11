@@ -6,7 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Album
 
-class AlbumAdapter(private val albumList: List<Album>): RecyclerView.Adapter<AlbumViewHolder>() {
+class AlbumAdapter(): RecyclerView.Adapter<AlbumViewHolder>() {
+
+    var albumList: List<Album> = listOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -14,7 +20,8 @@ class AlbumAdapter(private val albumList: List<Album>): RecyclerView.Adapter<Alb
     }
 
     override fun onBindViewHolder(holder: AlbumViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val item = albumList[position]
+        holder.render(item)
     }
 
     override fun getItemCount(): Int {
