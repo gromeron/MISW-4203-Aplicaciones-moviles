@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
+import com.uniandes.vynilsapp.data.db.AlbumMock
 
 class AlbumListActivity : AppCompatActivity() {
 
@@ -23,6 +24,6 @@ class AlbumListActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_album)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = AlbumAdapter()
+        recyclerView.adapter = AlbumAdapter(AlbumMock.albumList)
     }
 }
