@@ -17,7 +17,7 @@ class AlbumViewHolder(view: View): ViewHolder(view) {
     //val albumGenre = view.findViewById<TextView>(R.id.tv_album_genre)
     //val albumIcon = view.findViewById<ImageView>(R.id.iv_album_icon)
 
-    fun render(albumModel: Album) {
+    fun render(albumModel: Album, onClickListener:(Album) -> Unit) {
 
         //albumName.text = albumModel.name
         //albumGenre.text = albumModel.genre
@@ -25,6 +25,8 @@ class AlbumViewHolder(view: View): ViewHolder(view) {
         binding.tvAlbumName.text = albumModel.name
         binding.tvAlbumGenre.text = albumModel.genre
         Glide.with(binding.ivAlbumIcon.context).load(albumModel.cover).into(binding.ivAlbumIcon)
+
+        itemView.setOnClickListener { onClickListener(albumModel) }
 
     }
 }
