@@ -43,7 +43,7 @@ class AlbumListActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        val recyclerView = findViewById<RecyclerView>(R.id.recycler_album)
+        //val recyclerView = findViewById<RecyclerView>(R.id.recycler_album)
 
         //recyclerView.layoutManager = LinearLayoutManager(this)
         //recyclerView.adapter = AlbumAdapter(AlbumMock.albumList)
@@ -53,9 +53,9 @@ class AlbumListActivity : AppCompatActivity() {
     }
 
     private fun onItemSelected(album: Album) {
-        //Toast.makeText(this, album.name, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, album.description, Toast.LENGTH_SHORT).show()
         val intent = Intent(this, AlbumDetailActivity::class.java)
-        intent.putExtra(album.name, album.cover)
+        //intent.putExtra(album.name, album.cover)
         startActivity(intent)
     }
 }

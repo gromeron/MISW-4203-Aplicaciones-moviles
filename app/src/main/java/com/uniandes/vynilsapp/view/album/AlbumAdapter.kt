@@ -9,11 +9,17 @@ import com.uniandes.vynilsapp.data.model.Album
 
 class AlbumAdapter(private val onClickListener:(Album) -> Unit): RecyclerView.Adapter<AlbumViewHolder>() {
 
+    //var onAlbumSelected: ((id: Int) -> Unit)? = null
+
     var albumList: List<Album> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
+
+    /*fun onClickAlbum(position: Int) {
+        onAlbumSelected?.invoke(albumList[position].id!!)
+    }*/
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
