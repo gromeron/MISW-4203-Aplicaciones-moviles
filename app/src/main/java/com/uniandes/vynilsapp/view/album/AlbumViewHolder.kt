@@ -13,18 +13,13 @@ class AlbumViewHolder(view: View): ViewHolder(view) {
 
     private val binding = ItemAlbumBinding.bind(view)
 
-    //val albumName = view.findViewById<TextView>(R.id.tv_album_name)
-    //val albumGenre = view.findViewById<TextView>(R.id.tv_album_genre)
-    //val albumIcon = view.findViewById<ImageView>(R.id.iv_album_icon)
+    fun render(albumModel: Album, onClickListener:(Album) -> Unit) {
 
-    fun render(albumModel: Album) {
-
-        //albumName.text = albumModel.name
-        //albumGenre.text = albumModel.genre
-        //Glide.with(albumIcon.context).load(albumModel.cover).into(albumIcon)
         binding.tvAlbumName.text = albumModel.name
         binding.tvAlbumGenre.text = albumModel.genre
         Glide.with(binding.ivAlbumIcon.context).load(albumModel.cover).into(binding.ivAlbumIcon)
+
+        itemView.setOnClickListener { onClickListener(albumModel) }
 
     }
 }

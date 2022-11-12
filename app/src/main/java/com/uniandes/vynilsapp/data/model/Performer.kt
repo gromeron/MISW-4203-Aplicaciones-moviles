@@ -1,5 +1,9 @@
 package com.uniandes.vynilsapp.data.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Performer(
     val id: Int,
     val name: String,
@@ -8,4 +12,4 @@ data class Performer(
     val birthDate: String,
     val albums: List<Album>,
     val performerPrizes: List<PerformerPrize>
-    )
+) : Parcelable
