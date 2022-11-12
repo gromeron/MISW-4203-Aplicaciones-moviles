@@ -1,5 +1,6 @@
 package com.uniandes.vynilsapp.view.album
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -52,6 +53,9 @@ class AlbumListActivity : AppCompatActivity() {
     }
 
     private fun onItemSelected(album: Album) {
-        Toast.makeText(this, album.name, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, album.name, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, AlbumDetailActivity::class.java)
+        intent.putExtra(album.name, album.cover)
+        startActivity(intent)
     }
 }
