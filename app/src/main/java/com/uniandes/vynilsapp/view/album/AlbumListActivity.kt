@@ -55,7 +55,9 @@ class AlbumListActivity : AppCompatActivity() {
     private fun onItemSelected(album: Album) {
         //Toast.makeText(this, album.description, Toast.LENGTH_SHORT).show()
         val intent = Intent(this, AlbumDetailActivity::class.java)
-        intent.putExtra(AlbumDetailActivity.EXTRA_NAME, album.name)
+        //intent.putExtra(AlbumDetailActivity.EXTRA_NAME, album.name)
+        intent.putExtra(AlbumDetailActivity.EXTRA_ALBUM, album)
+
         startActivity(intent)
     }
 }
