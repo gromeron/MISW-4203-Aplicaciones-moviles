@@ -1,5 +1,6 @@
 package com.uniandes.vynilsapp.view.album
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.uniandes.vynilsapp.R
