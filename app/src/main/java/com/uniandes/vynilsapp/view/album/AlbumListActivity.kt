@@ -2,6 +2,7 @@ package com.uniandes.vynilsapp.view.album
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,7 +25,10 @@ class AlbumListActivity : AppCompatActivity() {
         binding = ActivityAlbumListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        albumAdapter = AlbumAdapter()
+        albumAdapter = AlbumAdapter { album ->
+            onItemSelected(
+                album
+            ) }
 
         // Observer
         albumViewModel = ViewModelProvider(this).get(AlbumViewModel::class.java)
@@ -45,5 +49,9 @@ class AlbumListActivity : AppCompatActivity() {
         binding.recyclerAlbum.layoutManager = LinearLayoutManager(this)
         //binding.recyclerAlbum.adapter = AlbumAdapter(AlbumMock.albumList)
         binding.recyclerAlbum.adapter = albumAdapter
+    }
+
+    private fun onItemSelected(album: Album) {
+        Toast.makeText(this, album.name, Toast.LENGTH_SHORT).show()
     }
 }

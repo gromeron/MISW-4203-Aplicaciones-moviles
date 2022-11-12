@@ -1,12 +1,13 @@
 package com.uniandes.vynilsapp.view.album
 
+import android.content.DialogInterface.OnClickListener
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Album
 
-class AlbumAdapter(/*private val albumList: List<Album>*/): RecyclerView.Adapter<AlbumViewHolder>() {
+class AlbumAdapter(private val onClickListener:(Album) -> Unit): RecyclerView.Adapter<AlbumViewHolder>() {
 
     var albumList: List<Album> = listOf()
         set(value) {
@@ -21,7 +22,7 @@ class AlbumAdapter(/*private val albumList: List<Album>*/): RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: AlbumViewHolder, position: Int) {
         val item = albumList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     override fun getItemCount(): Int {
