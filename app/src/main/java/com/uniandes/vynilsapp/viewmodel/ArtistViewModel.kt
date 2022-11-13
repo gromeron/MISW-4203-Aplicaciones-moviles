@@ -6,7 +6,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.data.model.Performer
 import com.uniandes.vynilsapp.data.repository.ArtistRepository
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class ArtistViewModel(application: Application): AndroidViewModel(application) {
 
-    val artistList = MutableLiveData<List<Album>>()
+    val artistList = MutableLiveData<List<Performer>>()
 
     private val artistRepository = ArtistRepository(application)
 
