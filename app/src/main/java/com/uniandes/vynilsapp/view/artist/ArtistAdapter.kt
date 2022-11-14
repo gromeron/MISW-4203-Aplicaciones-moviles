@@ -6,7 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Performer
 
-class ArtistAdapter(private val artistList: List<Performer>): RecyclerView.Adapter<ArtistViewHolder>() {
+class ArtistAdapter(): RecyclerView.Adapter<ArtistViewHolder>() {
+
+    var artistList: List<Performer> = listOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArtistViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return ArtistViewHolder(layoutInflater.inflate(R.layout.item_artist, parent, false))
