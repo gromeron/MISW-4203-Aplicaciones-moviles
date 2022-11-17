@@ -1,5 +1,6 @@
 package com.uniandes.vynilsapp.view.artist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
@@ -7,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.uniandes.vynilsapp.data.model.Performer
 import com.uniandes.vynilsapp.databinding.ActivityArtistListBinding
+import com.uniandes.vynilsapp.view.album.AlbumListActivity
 import com.uniandes.vynilsapp.viewmodel.ArtistViewModel
 
 class ArtistListActivity : AppCompatActivity() {
@@ -21,6 +23,13 @@ class ArtistListActivity : AppCompatActivity() {
 
         binding = ActivityArtistListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Album bt_albums intent activity
+        val buttonAlbum = binding.btAlbums
+        buttonAlbum.setOnClickListener {
+            val lanzar = Intent(this, AlbumListActivity::class.java)
+            startActivity(lanzar)
+        }
 
         artistAdapter = ArtistAdapter()
 

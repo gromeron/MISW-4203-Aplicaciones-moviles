@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.databinding.ActivityAlbumListBinding
+import com.uniandes.vynilsapp.view.artist.ArtistListActivity
 import com.uniandes.vynilsapp.viewmodel.AlbumViewModel
 
 class AlbumListActivity : AppCompatActivity() {
@@ -22,6 +23,13 @@ class AlbumListActivity : AppCompatActivity() {
 
         binding = ActivityAlbumListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Intend to artist Activity
+        val buttonArtist = binding.btArtists
+        buttonArtist.setOnClickListener {
+            val lanzar = Intent(this, ArtistListActivity::class.java)
+            startActivity(lanzar)
+        }
 
         albumAdapter = AlbumAdapter { album ->
             onItemSelected(
