@@ -1,6 +1,7 @@
 package com.uniandes.vynilsapp.data.service
 
 import com.uniandes.vynilsapp.data.model.Album
+import com.uniandes.vynilsapp.data.model.Collector
 import com.uniandes.vynilsapp.data.model.Performer
 
 class RetrofitBroker {
@@ -19,6 +20,15 @@ class RetrofitBroker {
         // Artists
         suspend fun getAllArtists (): List<Performer> {
             val request = ApiClient.artists.getAllArtists()
+            return if (request.isSuccessful)
+                request.body() ?: listOf()
+            else
+                listOf()
+        }
+
+        // Collectors
+        suspend fun getAllCollectors (): List<Collector> {
+            val request = ApiClient.collectors.getAllCollectors()
             return if (request.isSuccessful)
                 request.body() ?: listOf()
             else
