@@ -2,6 +2,7 @@ package com.uniandes.vynilsapp.view.album
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import com.bumptech.glide.Glide
 import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.databinding.ActivityAlbumDetailBinding

@@ -3,11 +3,14 @@ package com.uniandes.vynilsapp.view.artist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.data.model.Performer
 import com.uniandes.vynilsapp.databinding.ActivityArtistListBinding
+import com.uniandes.vynilsapp.view.album.AlbumDetailActivity
 import com.uniandes.vynilsapp.view.album.AlbumListActivity
 import com.uniandes.vynilsapp.viewmodel.ArtistViewModel
 
@@ -31,7 +34,10 @@ class ArtistListActivity : AppCompatActivity() {
             startActivity(lanzar)
         }
 
-        artistAdapter = ArtistAdapter()
+        artistAdapter = ArtistAdapter { artist ->
+            onItemSelected(
+                artist
+            ) }
 
         // Observer
         artistViewModel = ViewModelProvider(this).get(ArtistViewModel::class.java)
@@ -49,5 +55,13 @@ class ArtistListActivity : AppCompatActivity() {
         binding.recyclerArtist.layoutManager = LinearLayoutManager(this)
         binding.recyclerArtist.adapter = artistAdapter
 
+    }
+
+    private fun onItemSelected(artist: Performer) {
+
+        val intent = Intent(this, ArtistDetailActivity::class.java)
+        intent.putExtra(ArtistDetailActivity.EXTRA_ARTIST, artist)
+
+        startActivity(intent)
     }
 }
