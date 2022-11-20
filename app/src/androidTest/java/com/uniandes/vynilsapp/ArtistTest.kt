@@ -8,12 +8,10 @@ import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import com.uniandes.vynilsapp.view.album.AlbumListActivity
 import com.uniandes.vynilsapp.view.artist.ArtistListActivity
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.not
 import org.hamcrest.core.IsInstanceOf
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -43,14 +41,14 @@ class ArtistTest {
 
     @Test
     fun findByIdArtistListViewIsEnabled() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_artist))
             .check(matches(isEnabled()));
     }
 
     @Test
     fun checkBtAlbumsIsClickable() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_albums), withText("ALBUMS"),
@@ -62,7 +60,7 @@ class ArtistTest {
 
     @Test
     fun checkBtAlbumsIsEnabled() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_albums), withText("ALBUMS"),
@@ -74,7 +72,7 @@ class ArtistTest {
 
     @Test
     fun checkBtAlbumsIsDisplayed() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_albums), withText("ALBUMS"),
@@ -86,36 +84,43 @@ class ArtistTest {
 
     @Test
     fun findAllByArtistIconAllClickable() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_artist_icon), isClickable()));
     }
 
     @Test
     fun findAllByArtistIconAllEnabled() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_artist_icon), isEnabled()));
     }
 
     @Test
     fun findAllByArtistIconAllDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_artist_icon), isDisplayed()));
     }
 
     @Test
     fun findAllByArtistNameAllClickable() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_name), isClickable()));
     }
 
     @Test
     fun findAllByArtistNameAllEnabled() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_name), isEnabled()));
     }
 
     @Test
     fun findAllByArtistNameAllDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_name), isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildArtistImg() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_artist), withChild(withId(R.id.iv_artist_image))));
     }
 
@@ -125,6 +130,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_artist_image), isClickable()));
     }
 
@@ -134,6 +140,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_artist_image), isEnabled()));
     }
 
@@ -143,12 +150,14 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_artist_image), isDisplayed()));
     }
 
     //
     @Test
     fun checkIffAllParentHaveChildArtistName() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_artist), withChild(withId(R.id.tv_artist_name))));
     }
 
@@ -158,6 +167,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_name), isClickable()));
     }
 
@@ -167,6 +177,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_name), isEnabled()));
     }
 
@@ -182,6 +193,7 @@ class ArtistTest {
     //
     @Test
     fun checkIffAllParentHaveChildArtistDescription() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_artist), withChild(withId(R.id.tv_artist_description))));
     }
 
@@ -191,6 +203,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_description), isClickable()));
     }
 
@@ -200,6 +213,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_description), isEnabled()));
     }
 
@@ -209,12 +223,14 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_description), isDisplayed()));
     }
 
     //
     @Test
     fun checkIffAllParentHaveChildArtistBirthdate() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_artist), withChild(withId(R.id.tv_artist_birthdate))));
     }
 
@@ -224,6 +240,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_birthdate), isClickable()));
     }
 
@@ -233,15 +250,17 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_artist_birthdate), isEnabled()));
     }
 
     @Test
     fun findAllDetailByArtistBirthdateAllNotDisplayedInit() {
-        Thread.sleep(timeoutDisplay);
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_artist_birthdate)).check(matches(not(isDisplayed())));
     }
 
@@ -251,6 +270,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_artist_birthdate)).perform(scrollTo()).check(matches(isDisplayed()));
     }
 
@@ -260,6 +280,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.tv_artist_description_title), withText("Descripción"),
@@ -275,6 +296,7 @@ class ArtistTest {
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(withId(R.id.tv_artist_birthdate_title), withText("Fecha de nacimiento"))
         ).perform(scrollTo()).check(matches(isDisplayed()))

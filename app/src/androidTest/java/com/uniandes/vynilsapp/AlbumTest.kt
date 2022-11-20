@@ -41,14 +41,14 @@ class AlbumTest {
 
     @Test
     fun findByIdAlbumViewIsEnabled() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .check(matches(isEnabled()));
     }
 
     @Test
     fun checkBtCollectorsIsClickable() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_collectors), withText("COLLECTORS"),
@@ -60,7 +60,7 @@ class AlbumTest {
 
     @Test
     fun checkBtCollectorsIsEnabled() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_collectors), withText("COLLECTORS"),
@@ -72,7 +72,7 @@ class AlbumTest {
 
     @Test
     fun checkBtCollectorsIsDisplayed() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_collectors), withText("COLLECTORS"),
@@ -85,7 +85,7 @@ class AlbumTest {
 
     @Test
     fun checkBtArtistIsClickable() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_artists), withText("ARTISTS"),
@@ -97,7 +97,7 @@ class AlbumTest {
 
     @Test
     fun checkBtArtistIsEnabled() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_artists), withText("ARTISTS"),
@@ -109,7 +109,7 @@ class AlbumTest {
 
     @Test
     fun checkBtArtistIsDisplayed() {
-        Thread.sleep(timeout);
+        Thread.sleep(timeoutInicial);
         onView(
             allOf(
                 withId(R.id.bt_artists), withText("ARTISTS"),
@@ -167,82 +167,96 @@ class AlbumTest {
 
     @Test
     fun findAllByAlbumNameAllClickable() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_album_name), isClickable()));
     }
 
     @Test
     fun findAllByAlbumNameAllEnabled() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_album_name), isEnabled()));
     }
 
     @Test
     fun findAllByAlbumNameAllDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_album_name), isDisplayed()));
     }
 
     @Test
     fun findAllByAlbumGeneroAllClickable() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_album_genre), isClickable()));
     }
 
     @Test
     fun findAllByAlbumGeneroAllEnabled() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_album_genre), isEnabled()));
     }
 
     @Test
     fun findAllByAlbumGeneroAllDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.tv_album_genre), isDisplayed()));
     }
 
     @Test
     fun findAllByAlbumIconAllClickable() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_album_icon), isClickable()));
     }
 
     @Test
     fun findAllByAlbumIconAllEnable() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_album_icon), isEnabled()));
     }
 
     @Test
     fun findAllByAlbumIconAllDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.iv_album_icon), isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildCoverImage() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_album), withChild(withId(R.id.iv_album_cover))));
     }
 
     @Test
     fun checkDetailCoverImageIsEnabled() {
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.iv_album_cover)).check(matches(isEnabled()));
     }
 
     @Test
     fun checkDetailCoverImageIsDisplayed() {
         Thread.sleep(timeoutInicial);
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.iv_album_cover)).check(matches(isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildNameDate() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_album), withChild(withId(R.id.tv_album_name))));
     }
 
     @Test
     fun checkDetailNameIsEnabled() {
+        Thread.sleep(timeoutInicial);
         Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_name)).check(matches(isEnabled()));
     }
 
@@ -251,20 +265,22 @@ class AlbumTest {
         Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_name)).check(matches(isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildRealeaseDate() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_album), withChild(withId(R.id.tv_album_release))));
     }
 
     @Test
     fun checkDetailRealeaseDateIsEnabled() {
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_release)).check(matches(isEnabled()));
     }
 
@@ -273,12 +289,13 @@ class AlbumTest {
         Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_release)).check(matches(isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildDescription() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_album), withChild(withId(R.id.tv_album_description))));
     }
 
@@ -287,7 +304,7 @@ class AlbumTest {
         Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_description)).check(matches(isEnabled()));
     }
 
@@ -296,20 +313,22 @@ class AlbumTest {
         Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_description)).check(matches(not(isDisplayed())));
     }
 
     @Test
     fun checkDetailDescriptionDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_description)).perform(scrollTo()).check(matches(isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildGenre() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_album), withChild(withId(R.id.tv_album_genre))));
     }
 
@@ -318,15 +337,16 @@ class AlbumTest {
         Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_genre)).check(matches(isEnabled()));
     }
 
     @Test
     fun checkDetailGenreNotDisplayedInit() {
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_genre)).check(matches(not(isDisplayed())));
     }
 
@@ -335,12 +355,13 @@ class AlbumTest {
         Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_genre)).perform(scrollTo()).check(matches(isDisplayed()));
     }
 
     @Test
     fun checkIffAllParentHaveChildRecordLabel() {
+        Thread.sleep(timeoutInicial);
         onView(allOf(withId(R.id.recycler_album), withChild(withId(R.id.tv_album_recordlabel))));
     }
 
@@ -349,7 +370,7 @@ class AlbumTest {
         Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_recordlabel)).check(matches(isEnabled()));
     }
 
@@ -358,15 +379,16 @@ class AlbumTest {
         Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_recordlabel)).check(matches(not(isDisplayed())));
     }
 
     @Test
     fun checkDetailRecordLabelDisplayed() {
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
-
+        Thread.sleep(timeoutInicial);
         onView(withId(R.id.tv_album_recordlabel)).perform(scrollTo()).check(matches(isDisplayed()));
     }
 
