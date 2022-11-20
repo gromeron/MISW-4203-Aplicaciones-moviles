@@ -28,9 +28,9 @@ class AlbumTest {
     @get:Rule
     var activityRule = ActivityTestRule(AlbumListActivity::class.java)
 
-    val timeout : Long = 0;
-    val timeoutInicial : Long = 1000;
-    val timeoutDisplay : Long = 2000;
+    val timeout : Long = 500;
+    val timeoutInicial : Long = 1500;
+    val timeoutDisplay : Long = 2500;
 
     @Test
     fun findByIdAlbumViewIsDisplayed() {
@@ -121,6 +121,7 @@ class AlbumTest {
 
     @Test
     fun findByIdAlbumViewSwipeDownAndClick() {
+        Thread.sleep(timeoutDisplay);
         Thread.sleep(timeout);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
@@ -238,6 +239,7 @@ class AlbumTest {
 
     @Test
     fun checkDetailNameIsEnabled() {
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
 
@@ -291,6 +293,7 @@ class AlbumTest {
 
     @Test
     fun checkDetailDescriptionNotDisplayedInit() {
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
 
@@ -312,6 +315,7 @@ class AlbumTest {
 
     @Test
     fun checkDetailGenreEnabled() {
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
 
@@ -328,6 +332,7 @@ class AlbumTest {
 
     @Test
     fun checkDetailGenreDisplayed() {
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
 
@@ -341,6 +346,7 @@ class AlbumTest {
 
     @Test
     fun checkDetailRecordLabelEnabled() {
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click());
 
@@ -349,6 +355,7 @@ class AlbumTest {
 
     @Test
     fun checkDetailRecordLabelNotDisplayedInit() {
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_album))
             .perform(swipeDown(), click())
 

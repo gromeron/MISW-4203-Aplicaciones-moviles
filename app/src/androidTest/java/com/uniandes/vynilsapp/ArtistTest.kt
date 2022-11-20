@@ -30,7 +30,7 @@ class ArtistTest {
     @get:Rule
     var activityRule = ActivityTestRule(ArtistListActivity::class.java)
 
-    val timeout : Long = 0;
+    val timeout : Long = 500;
     val timeoutInicial : Long = 1000;
     val timeoutDisplay : Long = 2000;
 
@@ -163,7 +163,7 @@ class ArtistTest {
 
     @Test
     fun findAllDetailByArtistNameAllEnabled() {
-        Thread.sleep(timeoutInicial);
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
@@ -238,7 +238,7 @@ class ArtistTest {
 
     @Test
     fun findAllDetailByArtistBirthdateAllNotDisplayedInit() {
-        Thread.sleep(timeoutInicial);
+        Thread.sleep(timeoutDisplay);
         onView(withId(R.id.recycler_artist))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));

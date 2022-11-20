@@ -31,9 +31,9 @@ class CollectorsTest {
     @get:Rule
     var activityRule = ActivityTestRule(CollectorListActivity::class.java)
 
-    val timeout : Long = 0;
+    val timeout : Long = 500;
     val timeoutInicial : Long = 1000;
-    val timeoutDisplay : Long = 2000;
+    val timeoutDisplay : Long = 2500;
 
     @Test
     fun findByIdCollectorListViewIsDisplayed() {
