@@ -1,12 +1,14 @@
 package com.uniandes.vynilsapp.view.artist
 
+import android.content.DialogInterface.OnClickListener
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Performer
 
-class ArtistAdapter(): RecyclerView.Adapter<ArtistViewHolder>() {
+class ArtistAdapter(private val onClickListener: (Performer) -> Unit):
+    RecyclerView.Adapter<ArtistViewHolder>() {
 
     var artistList: List<Performer> = listOf()
         set(value) {
@@ -21,7 +23,7 @@ class ArtistAdapter(): RecyclerView.Adapter<ArtistViewHolder>() {
 
     override fun onBindViewHolder(holder: ArtistViewHolder, position: Int) {
         val item = artistList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     override fun getItemCount(): Int {

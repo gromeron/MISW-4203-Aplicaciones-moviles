@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Album
 
-class AlbumAdapter(private val onClickListener:(Album) -> Unit): RecyclerView.Adapter<AlbumViewHolder>() {
+class AlbumAdapter(private val onClickListener:(Album) -> Unit):
+    RecyclerView.Adapter<AlbumViewHolder>() {
 
     //var onAlbumSelected: ((id: Int) -> Unit)? = null
 
