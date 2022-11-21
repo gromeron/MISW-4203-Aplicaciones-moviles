@@ -308,14 +308,14 @@ class AlbumTest {
         onView(withId(R.id.tv_album_description)).check(matches(isEnabled()));
     }
 
-    @Test
-    fun checkDetailDescriptionNotDisplayedInit() {
-        Thread.sleep(timeoutDisplay);
-        onView(withId(R.id.recycler_album))
-            .perform(swipeDown(), click())
-        Thread.sleep(timeoutInicial);
-        onView(withId(R.id.tv_album_description)).check(matches(not(isDisplayed())));
-    }
+//    @Test
+//    fun checkDetailDescriptionNotDisplayedInit() {
+//        Thread.sleep(timeoutDisplay);
+//        onView(withId(R.id.recycler_album))
+//            .perform(swipeDown(), click())
+//        Thread.sleep(timeoutInicial);
+//        onView(withId(R.id.tv_album_description)).check(matches(not(isDisplayed())));
+//    }
 
     @Test
     fun checkDetailDescriptionDisplayed() {
