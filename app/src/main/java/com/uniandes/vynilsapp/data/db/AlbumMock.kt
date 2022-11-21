@@ -1,9 +1,6 @@
 package com.uniandes.vynilsapp.data.db
 
-import com.uniandes.vynilsapp.data.model.Album
-import com.uniandes.vynilsapp.data.model.Comment
-import com.uniandes.vynilsapp.data.model.Performer
-import com.uniandes.vynilsapp.data.model.Track
+import com.uniandes.vynilsapp.data.model.*
 
 class AlbumMock {
 
@@ -35,7 +32,10 @@ class AlbumMock {
                         "Rubén Blades Bellido de Luna",
                         "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Ruben_Blades_by_Gage_Skidmore.jpg/800px-Ruben_Blades_by_Gage_Skidmore.jpg",
                         "Es un cantante, compositor, músico, actor, abogado, político y activista panameño. Ha desarrollado gran parte de su carrera artística en la ciudad de Nueva York.",
-                        "1948-07-16T00:00:00.000Z"
+                        "1948-07-16T00:00:00.000Z",
+                        listOf<Album>(),
+                        listOf<PerformerPrize>(),
+                        ""
                     )
                 ),
                 listOf<Comment>(
@@ -61,7 +61,10 @@ class AlbumMock {
                         "Rubén Blades Bellido de Luna",
                         "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Ruben_Blades_by_Gage_Skidmore.jpg/800px-Ruben_Blades_by_Gage_Skidmore.jpg",
                         "Es un cantante, compositor, músico, actor, abogado, político y activista panameño. Ha desarrollado gran parte de su carrera artística en la ciudad de Nueva York.",
-                         "1948-07-16T00:00:00.000Z"
+                         "1948-07-16T00:00:00.000Z",
+                            listOf<Album>(),
+                            listOf<PerformerPrize>(),
+                        ""
                     )
                 ),
                 listOf<Comment>()
@@ -81,7 +84,10 @@ class AlbumMock {
                         "Queen",
                         "https://pm1.narvii.com/6724/a8b29909071e9d08517b40c748b6689649372852v2_hq.jpg",
                         "Queen es una banda británica de rock formada en 1970 en Londres por el cantante Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon. Si bien el grupo ha presentado bajas de dos de sus miembros (Mercury, fallecido en 1991, y Deacon, retirado en 1997), los integrantes restantes, May y Taylor, continúan trabajando bajo el nombre Queen, por lo que la banda aún se considera activa.",
-                        "1970-01-01T00:00:00.000Z"
+                        "1970-01-01T00:00:00.000Z",
+                        listOf<Album>(),
+                        listOf<PerformerPrize>(),
+                        ""
                     )
                 ),
                 listOf<Comment>(

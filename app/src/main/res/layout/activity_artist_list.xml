@@ -10,10 +10,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.album.AlbumListActivity">
+        tools:context=".view.artist.ArtistListActivity">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_album"
+            android:id="@+id/recycler_artist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -22,21 +22,10 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/bt_collectors"
+                android:id="@+id/bt_albums"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="48dp"
-                android:text="Collectors"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/bt_artists"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Artists"
+                android:text="Albums"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />

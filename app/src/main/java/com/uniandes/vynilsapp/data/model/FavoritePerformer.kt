@@ -4,8 +4,10 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Track(
+data class FavoritePerformer(
     val id: Int,
     val name: String,
-    val duration: String
-) : Parcelable
+    val image: String,
+    val description: String,
+    val birthDate: String,
+): Parcelable

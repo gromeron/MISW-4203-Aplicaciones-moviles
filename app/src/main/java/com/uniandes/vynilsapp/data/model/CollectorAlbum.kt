@@ -4,8 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Track(
+data class CollectorAlbum(
     val id: Int,
-    val name: String,
-    val duration: String
-) : Parcelable
+    val price: Int,
+    val status: String
+): Parcelable

@@ -13,5 +13,7 @@ object ApiClient {
         .build()
 
     val albums: AlbumApi = retrofit.create(AlbumApi::class.java)
+    val artists: ArtistApi = retrofit.create(ArtistApi::class.java)
+    val collectors: CollectorApi = retrofit.create(CollectorApi::class.java)
 
 }

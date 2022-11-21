@@ -4,8 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Track(
+data class PerformerPrize(
     val id: Int,
-    val name: String,
-    val duration: String
+    val premiationDate: String
 ) : Parcelable
