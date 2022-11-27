@@ -46,7 +46,10 @@ class CollectorListActivity : AppCompatActivity() {
     }
 
     private fun onItemSelected(collector: Collector) {
-        Toast.makeText(this, collector.name, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, collector.name, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, CollectorDetailActivity::class.java)
+        intent.putExtra(CollectorDetailActivity.EXTRA_COLLECTOR, collector)
+        startActivity(intent)
     }
 
     private fun initRecyclerView() {
