@@ -3,6 +3,7 @@ package com.uniandes.vynilsapp.view.collector
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,7 +32,7 @@ class CollectorListActivity : AppCompatActivity() {
             startActivity(lanzar)
         }
 
-        collectorAdapter = CollectorAdapter()
+        collectorAdapter = CollectorAdapter { collector -> onItemSelected(collector) }
 
         // Observer
         collectorViewModel = ViewModelProvider(this).get(CollectorViewModel::class.java)
@@ -42,6 +43,13 @@ class CollectorListActivity : AppCompatActivity() {
         })
 
         initRecyclerView()
+    }
+
+    private fun onItemSelected(collector: Collector) {
+        //Toast.makeText(this, collector.name, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, CollectorDetailActivity::class.java)
+        intent.putExtra(CollectorDetailActivity.EXTRA_COLLECTOR, collector)
+        startActivity(intent)
     }
 
     private fun initRecyclerView() {
