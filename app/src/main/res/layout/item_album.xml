@@ -37,6 +37,7 @@
                     android:layout_gravity="center"
                     android:paddingLeft="14dp"
                     android:paddingRight="14dp"
+                    android:contentDescription="imagen tipo ícono del album"
                     app:srcCompat="@drawable/ic_launcher_foreground"
                     android:layout_alignParentLeft="true"></ImageView>
 
