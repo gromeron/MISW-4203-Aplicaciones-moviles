@@ -39,6 +39,13 @@ class AlbumListActivity : AppCompatActivity() {
             startActivity(lanzar2)
         }
 
+        // Intend to create album Activity
+        val buttonCreateAlbum = binding.buttonCreateAlbum
+        buttonCreateAlbum.setOnClickListener {
+            val lanzar3 = Intent(this, AlbumCreateActivity::class.java)
+            startActivity(lanzar3)
+        }
+
         albumAdapter = AlbumAdapter { album ->
             onItemSelected(
                 album
@@ -51,6 +58,9 @@ class AlbumListActivity : AppCompatActivity() {
                 albumAdapter.albumList = this
             }
         })
+
+
+
 
         initRecyclerView()
     }

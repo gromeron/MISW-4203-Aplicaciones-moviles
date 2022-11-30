@@ -24,7 +24,7 @@ class AlbumDetailActivity : AppCompatActivity() {
         if (album != null) {
             binding.tvAlbumName.text = album.name
             Glide.with(this).load(album.cover).into(binding.ivAlbumCover)
-            binding.tvAlbumRelease.text = album.releaseDate
+            binding.tvAlbumRelease.text = album.releaseDate.toString()
             binding.tvAlbumDescription.text = album.description
             binding.tvAlbumGenre.text = album.genre
             binding.tvAlbumRecordlabel.text = album.recordLabel
