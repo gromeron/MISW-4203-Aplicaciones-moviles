@@ -46,6 +46,7 @@ class AlbumCreateActivity : AppCompatActivity() {
             datePicker.show()
         }
 
+
         binding.btnCreate.setOnClickListener {
             if (binding.nameAlbum.text.toString() == "" || binding.coverAlbum.text.toString() == "" ||
                 binding.descriptionAlbum.text.toString() == "" || binding.releaseDateAlbum.text.toString() == "" ||
