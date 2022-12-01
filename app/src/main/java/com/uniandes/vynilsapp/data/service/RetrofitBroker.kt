@@ -1,5 +1,6 @@
 package com.uniandes.vynilsapp.data.service
 
+import android.util.Log
 import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.data.model.Collector
 import com.uniandes.vynilsapp.data.model.Performer
@@ -15,6 +16,17 @@ class RetrofitBroker {
                 request.body() ?: listOf()
             else
                 listOf()
+        }
+
+        suspend fun createAlbum(album: Album): Album? {
+            val request = ApiClient.albums.createAlbum(album)
+            if (request.isSuccessful){
+                Log.e("SuccessCrearAlbum", request.toString())
+                return request.body()
+            }else{
+                Log.e("ErrorCrearAlbum", request.toString())
+                return null
+            }
         }
 
         // Artists

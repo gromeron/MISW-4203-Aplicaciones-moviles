@@ -3,7 +3,7 @@ package com.uniandes.vynilsapp.data.service
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val BASE_URL = "https://vynils-back.herokuapp.com/"
+private const val BASE_URL = "https://vynils-back.onrender.com/"
 
 object ApiClient {
 
