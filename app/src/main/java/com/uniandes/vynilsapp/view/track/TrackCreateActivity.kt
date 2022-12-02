@@ -11,7 +11,7 @@ import com.uniandes.vynilsapp.viewmodel.TrackViewModel
 
 class TrackCreateActivity : AppCompatActivity() {
 
-    private var albumId = 0
+    private var albumId:Int = 0
     private lateinit var binding: ActivityTrackCreateBinding
     private val trackViewModel: TrackViewModel by viewModels()
 
