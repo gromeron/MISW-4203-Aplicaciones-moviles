@@ -29,7 +29,7 @@ class TrackCreateActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"There are empty fields, please fill them.", Toast.LENGTH_SHORT).show()
             } else {
                 val track = Track(null, trackName, trackDuration)
-                trackViewModel.createTrack(track)
+                trackViewModel.createTrack(this.albumId, track)
             }
         }
 

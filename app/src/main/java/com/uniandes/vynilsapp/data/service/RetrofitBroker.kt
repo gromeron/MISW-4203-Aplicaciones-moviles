@@ -31,14 +31,13 @@ class RetrofitBroker {
         }
 
         // Tracks
-        suspend fun createTrack(track: Track): Track? {
-            val request = ApiClient.tracks.createTrack(track)
-            if (request.isSuccessful) {
-                Log.e("SuccessCrearTrack", request.toString())
-                return request.body()
+        suspend fun createTrack(albumId:Int, track: Track): Track? {
+            val request = ApiClient.tracks.createTrack(albumId, track)
+            return if (request.isSuccessful) {
+                request.body()
             } else {
                 Log.e("ErrorCrearTrack", request.toString())
-                return null
+                null
             }
         }
 
