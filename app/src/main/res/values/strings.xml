@@ -2,10 +2,10 @@
     <string name="app_name">VynilsApp</string>
     <string name="album_list_header">Albums</string>
     <string name="activity_album_create_date_pick">%1$d/%2$d/%3$d</string>
-    <string name="activity_album_create_album_name">Album name</string>
+    <string name="activity_album_create_album_name">Name</string>
     <string name="activity_album_create_url_cover">URL cover</string>
     <string name="activity_album_create_album_description">Description</string>
-    <string name="activity_album_create_album_release_date">Release date</string>
+    <string name="activity_album_create_album_release_date">Release Date</string>
     <string name="activity_album_cd_floating_btn_new_album">Button to add a new album</string>
     <string name="cancelBtnAlbum">Cancelar</string>
     <string name="createBtnAlbum">Crear</string>
@@ -17,7 +17,7 @@
     </string-array>
 
     <string-array name="label_album_array">
-        <item>Recorded label</item>
+        <item>Recorded Label</item>
         <item>Sony Music</item>
         <item>Discos Fuentes</item>
     </string-array>
