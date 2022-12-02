@@ -4,6 +4,7 @@ import android.util.Log
 import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.data.model.Collector
 import com.uniandes.vynilsapp.data.model.Performer
+import com.uniandes.vynilsapp.data.model.Track
 
 class RetrofitBroker {
 
@@ -26,6 +27,17 @@ class RetrofitBroker {
             }else{
                 Log.e("ErrorCrearAlbum", request.toString())
                 return null
+            }
+        }
+
+        // Tracks
+        suspend fun createTrack(albumId:Int, track: Track): Track? {
+            val request = ApiClient.tracks.createTrack(albumId, track)
+            return if (request.isSuccessful) {
+                request.body()
+            } else {
+                Log.e("ErrorCrearTrack", request.toString())
+                null
             }
         }
 

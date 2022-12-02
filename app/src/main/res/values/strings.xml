@@ -7,6 +7,9 @@
     <string name="activity_album_create_album_description">Description</string>
     <string name="activity_album_create_album_release_date">Release Date</string>
     <string name="activity_album_cd_floating_btn_new_album">Button to add a new album</string>
+    <string name="activity_album_track_add">Add Track</string>
+    <string name="activity_album_track_name">Track Name</string>
+    <string name="activity_album_track_duration">Track Duration</string>
     <string name="cancelBtnAlbum">Cancelar</string>
     <string name="createBtnAlbum">Crear</string>
     <string-array name="genre_album_array">
