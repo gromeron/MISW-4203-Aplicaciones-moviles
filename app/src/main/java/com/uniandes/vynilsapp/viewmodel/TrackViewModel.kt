@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.uniandes.vynilsapp.data.model.Album
 import com.uniandes.vynilsapp.data.model.Track
 import com.uniandes.vynilsapp.data.repository.TrackRepository
 import kotlinx.coroutines.Dispatchers

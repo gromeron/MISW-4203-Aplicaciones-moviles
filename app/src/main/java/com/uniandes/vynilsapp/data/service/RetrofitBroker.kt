@@ -33,10 +33,10 @@ class RetrofitBroker {
         // Tracks
         suspend fun createTrack(track: Track): Track? {
             val request = ApiClient.tracks.createTrack(track)
-            if (request.isSuccessful){
+            if (request.isSuccessful) {
                 Log.e("SuccessCrearTrack", request.toString())
                 return request.body()
-            }else{
+            } else {
                 Log.e("ErrorCrearTrack", request.toString())
                 return null
             }

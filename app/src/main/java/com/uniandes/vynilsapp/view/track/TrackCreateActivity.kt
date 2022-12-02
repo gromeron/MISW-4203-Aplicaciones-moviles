@@ -11,6 +11,7 @@ import com.uniandes.vynilsapp.viewmodel.TrackViewModel
 
 class TrackCreateActivity : AppCompatActivity() {
 
+    private var albumId = 0
     private lateinit var binding: ActivityTrackCreateBinding
     private val trackViewModel: TrackViewModel by viewModels()
 
@@ -20,14 +21,14 @@ class TrackCreateActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setTitle(R.string.activity_album_track_add)
 
+        this.albumId = intent.getStringExtra("albumId").toString().toInt()
         binding.btnCreate.setOnClickListener {
-            val idAlbum = 1
             val trackName = binding.trackName.text.toString()
             val trackDuration = binding.trackDuration.text.toString()
             if (trackName == "" || trackDuration == "") {
                 Toast.makeText(applicationContext,"There are empty fields, please fill them.", Toast.LENGTH_SHORT).show()
             } else {
-                val track = Track(idAlbum, trackName, trackDuration)
+                val track = Track(null, trackName, trackDuration)
                 trackViewModel.createTrack(track)
             }
         }
@@ -39,7 +40,7 @@ class TrackCreateActivity : AppCompatActivity() {
                     "Track was created successfully.",
                     Toast.LENGTH_SHORT
                 ).show()
-                onBackPressed()
+                finish()
             } else {
                 Toast.makeText(
                     applicationContext,

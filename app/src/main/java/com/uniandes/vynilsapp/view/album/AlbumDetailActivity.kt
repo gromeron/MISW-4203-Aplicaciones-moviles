@@ -25,8 +25,10 @@ class AlbumDetailActivity : AppCompatActivity() {
         val album = intent.getParcelableExtra<Album>(EXTRA_ALBUM)
         val button = findViewById<Button>(R.id.button2)
         button.setOnClickListener {
-            val intent = Intent(this, TrackCreateActivity::class.java)
-            startActivity(intent)
+            Intent(this, TrackCreateActivity::class.java).also {
+                it.putExtra("albumId", album?.id.toString())
+                startActivity(it)
+            }
         };
 
         if (album != null) {

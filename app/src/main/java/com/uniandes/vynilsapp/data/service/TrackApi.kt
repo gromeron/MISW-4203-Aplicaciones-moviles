@@ -7,6 +7,6 @@ import retrofit2.http.POST
 
 interface TrackApi {
 
-    @POST("tracks")
+    @POST("albums/8/tracks")
     suspend fun createTrack(@Body track: Track) : Response<Track>
 }
