@@ -15,6 +15,13 @@
         android:theme="@style/Theme.VynilsApp"
         tools:targetApi="31">
         <activity
+            android:name=".view.track.TrackCreateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.album.AlbumCreateActivity"
             android:exported="false" />
         <activity
@@ -68,7 +75,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
     </application>
 
 </manifest>
