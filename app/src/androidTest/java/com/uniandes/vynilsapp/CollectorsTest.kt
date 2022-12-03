@@ -97,5 +97,238 @@ class CollectorsTest {
         onView(allOf(withId(R.id.tv_collector_name), isDisplayed()));
     }
 
+    @Test
+    fun checkCollectorDetailNameTitleDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_name_title), withText("Coleccionista"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailNameTitleEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_name_title), withText("Coleccionista"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailNameDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(withId(R.id.tv_collector_name)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailNameEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(withId(R.id.tv_collector_name)).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailTelephoneTitleDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_telephone_title), withText("Número telefónico"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailTelephoneTitleEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_telephone_title), withText("Número telefónico"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailTelephoneDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(withId(R.id.tv_collector_telephone)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailTelephoneEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(withId(R.id.tv_collector_telephone)).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailEmailTitleDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_email_title), withText("email"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailEmailTitleEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_email_title), withText("email"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailEmailDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(withId(R.id.tv_collector_email)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailEmailEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(withId(R.id.tv_collector_email)).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailCommentTitleDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_comments_title), withText("Comentarios"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailCommentTitleEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_comments_title), withText("Comentarios"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailArtistasPreferidosTitleDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_favoriteperformers_title), withText("Artistas Preferidos"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailArtistasPreferidosTitleEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_favoriteperformers_title), withText("Artistas Preferidos"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isEnabled()))
+    }
+
+    @Test
+    fun checkCollectorDetailAlbumesPreferidosTitleDisplayed() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_albums_title), withText("Albumes del coleccionista"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun checkCollectorDetailAlbumesPreferidosTitleEnabled() {
+        Thread.sleep(timeoutDisplay);
+        onView(withId(R.id.recycler_collector))
+            .perform(swipeDown(), click())
+        Thread.sleep(timeoutInicial);
+        onView(
+            allOf(
+                withId(R.id.tv_collector_albums_title), withText("Albumes del coleccionista"),
+                withParent(withParent(IsInstanceOf.instanceOf(android.widget.FrameLayout::class.java))),
+                isDisplayed()
+            )
+        ).check(matches(isEnabled()))
+    }
 
 }
