@@ -9,7 +9,7 @@ data class Collector(
     val name: String,
     val telephone: String,
     val email: String,
-    val collectorAlbums: List<CollectorAlbum>,
-    val comments: List<Comment>,
-    val favoritePerformers: List<FavoritePerformer>
+    val collectorAlbums: List<CollectorAlbum>?,
+    val comments: List<Comment>?,
+    val favoritePerformers: List<FavoritePerformer>?
 ): Parcelable

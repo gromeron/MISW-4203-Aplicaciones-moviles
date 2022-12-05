@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.album.AlbumDetailActivity">
+        tools:context=".view.collector.CollectorDetailActivity">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -18,40 +18,28 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/iv_album_cover"
-                    android:layout_width="353dp"
-                    android:layout_height="367dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:contentDescription="imagen de la portada del album"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
-                    android:id="@+id/tv_album_name_title"
+                    android:id="@+id/tv_collector_name_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
-                    android:text="Album"
+                    android:text="Coleccionista"
                     android:textColor="@color/purple_500"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_album_cover" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_album_name"
+                    android:id="@+id/tv_collector_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -63,25 +51,25 @@
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_album_name_title"
-                    tools:text="Nombre"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_collector_name_title"
+                    tools:text="Coleccionista"
                     tools:visibility="visible" />
 
                 <TextView
-                    android:id="@+id/tv_album_release_title"
+                    android:id="@+id/tv_collector_telephone_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
-                    android:text="Fecha de lanzamiento"
+                    android:text="Número telefónico"
                     android:textColor="@color/purple_500"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_album_name" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_collector_name" />
 
                 <TextView
-                    android:id="@+id/tv_album_release"
+                    android:id="@+id/tv_collector_telephone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -89,24 +77,24 @@
                     android:layout_marginEnd="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_album_release_title"
-                    tools:text="Fecha de lanzamiento" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_collector_telephone_title"
+                    tools:text="5555555555" />
 
                 <TextView
-                    android:id="@+id/tv_album_description_title"
+                    android:id="@+id/tv_collector_email_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
-                    android:text="Descripción"
+                    android:text="email"
                     android:textColor="@color/purple_500"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_album_release" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_collector_telephone" />
 
                 <TextView
-                    android:id="@+id/tv_album_description"
+                    android:id="@+id/tv_collector_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -114,24 +102,24 @@
                     android:layout_marginEnd="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_album_description_title"
-                    tools:text="Descripción" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_collector_email_title"
+                    tools:text="email@email.com" />
 
                 <TextView
-                    android:id="@+id/tv_album_genre_title"
+                    android:id="@+id/tv_collector_comments_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
-                    android:text="Género"
+                    android:text="Comentarios"
                     android:textColor="@color/purple_500"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_album_description" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_collector_email" />
 
                 <TextView
-                    android:id="@+id/tv_album_genre"
+                    android:id="@+id/tv_collector_comments"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -139,24 +127,24 @@
                     android:layout_marginEnd="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_album_genre_title"
-                    tools:text="Genero" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_collector_comments_title"
+                    tools:text="Lista de Comentarios" />
 
                 <TextView
-                    android:id="@+id/tv_album_recordlabel_title"
+                    android:id="@+id/tv_collector_favoriteperformers_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
-                    android:text="Sello disquero"
+                    android:text="Artistas Preferidos"
                     android:textColor="@color/purple_500"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_album_genre" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_collector_comments" />
 
                 <TextView
-                    android:id="@+id/tv_album_recordlabel"
+                    android:id="@+id/tv_collector_favoriteperformers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -165,20 +153,37 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_album_recordlabel_title"
-                    tools:text="Sello Disquero" />
+                    tools:text="Lista de Artistas" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/tv_collector_albums_title"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
-                    android:layout_gravity="right"
-                    android:text="ADD TRACK"
+                    android:text="Albumes del coleccionista"
+                    android:textColor="@color/purple_500"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_collector_favoriteperformers" />
+
+                <TextView
+                    android:id="@+id/tv_collector_albums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_album_albums_title"
+                    tools:text="Lista de albumes" />
+
+
             </LinearLayout>
+
         </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
