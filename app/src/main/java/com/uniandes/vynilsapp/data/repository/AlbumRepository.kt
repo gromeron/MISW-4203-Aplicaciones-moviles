@@ -7,5 +7,6 @@ import com.uniandes.vynilsapp.data.service.RetrofitBroker
 class AlbumRepository(val application: Application) {
 
     suspend fun getAllAlbums(): List<Album> = RetrofitBroker.getAllAlbums()
+    suspend fun createAlbum(album: Album) = RetrofitBroker.createAlbum(album)
 
 }

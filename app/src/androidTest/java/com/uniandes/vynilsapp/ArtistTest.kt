@@ -254,16 +254,6 @@ class ArtistTest {
         onView(allOf(withId(R.id.tv_artist_birthdate), isEnabled()));
     }
 
-//    @Test
-//    fun findAllDetailByArtistBirthdateAllNotDisplayedInit() {
-//        Thread.sleep(timeoutInicial);
-//        onView(withId(R.id.recycler_artist))
-//            .perform(
-//                RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()));
-//        Thread.sleep(timeoutInicial);
-//        onView(withId(R.id.tv_artist_birthdate)).check(matches(not(isDisplayed())));
-//    }
-
     @Test
     fun checkDetailArtistBirthdateDisplayed() {
         Thread.sleep(timeoutInicial);

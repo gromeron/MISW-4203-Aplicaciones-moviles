@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 class AlbumViewModel(application: Application): AndroidViewModel(application) {
 
     val albumList = MutableLiveData<List<Album>>()
-
+    val albumCreated = MutableLiveData<Album>()
     private val albumsRepository = AlbumRepository(application)
 
     val albums: LiveData<List<Album>>
@@ -30,6 +30,18 @@ class AlbumViewModel(application: Application): AndroidViewModel(application) {
                 albumList.postValue(albumsRepository.getAllAlbums())
             }
         } catch (e: Exception) {
+            Log.e("Error", e.message ?: "Failure service")
+        }
+    }
+
+    fun createAlbum(album: Album) {
+        try {
+            viewModelScope.launch(Dispatchers.IO) {
+                Log.d("CrearAlbum", "Se inicia creación con: "+ album.toString())
+                albumCreated.postValue(albumsRepository.createAlbum(album))
+                Log.d("CrearAlbum", "Se terminó")
+            }
+        } catch (e: java.lang.Exception) {
             Log.e("Error", e.message ?: "Failure service")
         }
     }

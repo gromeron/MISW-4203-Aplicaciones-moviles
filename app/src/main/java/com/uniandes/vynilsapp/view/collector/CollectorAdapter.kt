@@ -1,13 +1,15 @@
 package com.uniandes.vynilsapp.view.collector
 
 import android.view.LayoutInflater
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.vynilsapp.R
 import com.uniandes.vynilsapp.data.model.Collector
 import com.uniandes.vynilsapp.view.collector.CollectorViewHolder
 
-class CollectorAdapter(): RecyclerView.Adapter<CollectorViewHolder>() {
+class CollectorAdapter(private val onClickListener: (Collector) -> Unit):
+    RecyclerView.Adapter<CollectorViewHolder>() {
 
     var collectorList: List<Collector> = listOf()
         set(value) {
@@ -22,7 +24,7 @@ class CollectorAdapter(): RecyclerView.Adapter<CollectorViewHolder>() {
 
     override fun onBindViewHolder(holder: CollectorViewHolder, position: Int) {
         val item = collectorList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     override fun getItemCount(): Int {
